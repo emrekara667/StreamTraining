@@ -1,7 +1,6 @@
 package app;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -12,13 +11,13 @@ public class Stream {
 
         List<User> userArrayList = new ArrayList<>();
 
-        userArrayList.add(new User(1, "emre"));
-        userArrayList.add(new User(2, "sema"));
-        userArrayList.add(new User(3, "ekrem"));
-        userArrayList.add(new User(4, "hacer"));
-        userArrayList.add(new User(5, "pinar"));
-        userArrayList.add(new User(6, "mustafa"));
-        userArrayList.add(new User(7, "adem"));
+        userArrayList.add(new User(1, "Maria "));
+        userArrayList.add(new User(2, "Ana "));
+        userArrayList.add(new User(3, "Antonio "));
+        userArrayList.add(new User(4, "Thomas "));
+        userArrayList.add(new User(5, "Hanna "));
+        userArrayList.add(new User(6, "Martín "));
+        userArrayList.add(new User(7, "Victoria "));
 
         userArrayList.stream().forEach(x-> {
             System.out.println(x.getId());
