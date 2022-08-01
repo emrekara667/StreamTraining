@@ -1,12 +1,5 @@
 # StreamTraining
 JavaStream101
-
- - foreach
- - map
- - filter
- - collect
-
-
  > In this tutorial,
     We’ll learn about What are Intermediate Operations in Java 8 Stream.
     All these operations are in package java.util.stream.Stream.
