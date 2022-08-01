@@ -32,7 +32,7 @@ mapToDouble(), mapToLong(), mapToInt()
 
 
 - -----------------------------------------------
-> This Java tutorial helps you discover the folllowing terminal operations provided by Java Stream API in details:
+> This section helps you discover the folllowing terminal operations provided by Java Stream API in details:
 1. The allMatch() operation
 2. The anyMatch() operation
 3. The noneMatch() operation
@@ -46,5 +46,3 @@ mapToDouble(), mapToLong(), mapToInt()
 Remember the following two key characteristics of terminal operations:
 They can return a primitive value (booleanor long), a concrete type (Optional value object), or void (creating side effect).
 They are eagerly executed, and a terminal operation is always the last operation in a Stream pipeline.
-Note that the following examples are still based on the sample data (a list of Person objects) in the tutorial
-Java Stream Aggregate Functions.
