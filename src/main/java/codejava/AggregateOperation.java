@@ -2,14 +2,13 @@ package codejava;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Operation {
+public class AggregateOperation {
     public static void main(String[] args) {
 
-        List<Person> personList = getPersonList();
+        List<Person> personList = CreatePerson.getPersonList();
 
         //FILTER
         personList.stream().filter(p -> p.getGender().equals(Gender.MALE))
@@ -44,24 +43,23 @@ public class Operation {
 
         collectDistinctIntNumber.stream().forEach(System.out::println);
 
+        System.out.println("--------------------------");
+        List<String> collectSurnameSort = personList.stream().map(p -> p.getLastName())
+                .distinct()
+                .sorted()
+                .collect(Collectors.toList());
 
-    }
-
-    private static List<Person> getPersonList() {
-        List<Person> listPersons = new ArrayList<>();
-
-        listPersons.add(new Person("Alice", "Brown", "alice@gmail.com", Gender.FEMALE, 26));
-        listPersons.add(new Person("Bob", "Young", "bob@gmail.com", Gender.MALE, 32));
-        listPersons.add(new Person("Carol", "Hill", "carol@gmail.com", Gender.FEMALE, 23));
-        listPersons.add(new Person("David", "Green", "david@gmail.com", Gender.MALE, 39));
-        listPersons.add(new Person("Eric", "Young", "eric@gmail.com", Gender.MALE, 26));
-        listPersons.add(new Person("Frank", "Thompson", "frank@gmail.com", Gender.MALE, 33));
-        listPersons.add(new Person("Gibb", "Brown", "gibb@gmail.com", Gender.MALE, 27));
-        listPersons.add(new Person("Henry", "Baker", "henry@gmail.com", Gender.MALE, 30));
-        listPersons.add(new Person("Isabell", "Hill", "isabell@gmail.com", Gender.FEMALE, 22));
-        listPersons.add(new Person("Jane", "Smith", "jane@gmail.com", Gender.FEMALE, 24));
+        collectSurnameSort.stream().forEach(System.out::println);
+        System.out.println("--------------------------");
+        //LIMIT 5 youngest person
+        personList.stream().sorted().limit(5).forEach(System.out::println);
+        //SKIP find oldest age person
+        System.out.println("--------------------------");
+        personList.stream().sorted().skip(personList.size()-1).forEach(p-> System.out.println("Oldest age : " + p.getAge()));
 
 
-        return listPersons;
+
+
+
     }
 }

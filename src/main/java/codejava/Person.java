@@ -22,7 +22,7 @@ public class Person implements Comparable<Person>{
 
     @Override
     public int compareTo(Person person) {
-        return -(this.age - person.age);
+        return this.age - person.age;
     }
 
     @Override

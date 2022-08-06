@@ -43,3 +43,7 @@ They are eagerly executed, and a terminal operation is always the last operation
 
  > The distinct() operation returns a stream consisting of the distinct elements (no duplicates) by comparing objects via
 their equals() method
+ 
+- https://www.techiedelight.com/convert-int-array-list-integer/
+
+- ALL MATCH : Note that if the stream is empty, the method returns true and the predicate is not evaluated.
