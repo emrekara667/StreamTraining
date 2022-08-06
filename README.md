@@ -39,3 +39,7 @@ mapToDouble(), mapToLong(), mapToInt()
 Remember the following two key characteristics of terminal operations:
 They can return a primitive value (booleanor long), a concrete type (Optional value object), or void (creating side effect).
 They are eagerly executed, and a terminal operation is always the last operation in a Stream pipeline.
+
+
+ > The distinct() operation returns a stream consisting of the distinct elements (no duplicates) by comparing objects via
+their equals() method
